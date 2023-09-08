@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/img_blend"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <ImageView
+                    android:id="@+id/square"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/square" />
+
+                <ImageView
+                    android:id="@+id/imagem"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:src="@drawable/image"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/opensans_bold"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_change_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_rounder_teal"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/opensans_bold"
+                android:text="Cambiar Imagen"
+                android:textSize="10sp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/recognize_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recognize_text"
+                android:background="@drawable/btn_rounder"
+                android:layout_gravity="center"
+                android:fontFamily="@font/opensans_bold"
+                android:layout_marginTop="20dp"
+                android:enabled="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"
+                android:text="@string/recognized_text"
+                android:fontFamily="@font/opensans_bold"/>
+
+            <EditText
+                android:id="@+id/recognized_textET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/recognized_textET"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/opensans_bold"
+                android:background="@drawable/background_text"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
